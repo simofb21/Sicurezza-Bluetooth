@@ -4,3 +4,4 @@ Presentazione su i problemi riguardanti la sicurezza nella tecnologia di trasmis
 Per quanto riguarda 
 Trattiamo : vulnerabilità , attacco , e come difendersi
 E poi un' introduzione generale.
+Trattare smp, sniffing e man in the middle
