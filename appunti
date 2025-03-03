@@ -1,0 +1,25 @@
+Facciamo : file MD qua in cui scriviamo il testo tutto esteso, e spieghiamo le robe chiare . 
+presentazione che ha sopratutto le immagini. 
+Come è diviso  : 
+Introduzione
+Pila bluetooth le
+SMP nel Bluetooth LE
+LMP nel bluetooth classic
+E poi tutti questi vari attacchi ecc
+Sniffing (Intercettazione) dei dati: Gli attaccanti possono "ascoltare" il traffico Bluetooth non protetto per ottenere informazioni sensibili, come password, dati bancari o altre comunicazioni.
+
+Bluejacking: Questo attacco consiste nell'invio di messaggi indesiderati ad altri dispositivi Bluetooth. Sebbene non sia dannoso, può essere fastidioso e invasivo.
+
+Bluesnarfing: Gli attaccanti rubano informazioni da un dispositivo Bluetooth senza il permesso dell'utente. Può riguardare contatti, messaggi o altre informazioni sensibili.
+
+Bluebugging: Consente agli attaccanti di prendere il controllo di un dispositivo Bluetooth vulnerabile, come avviare chiamate o accedere a funzioni del telefono, senza che l'utente se ne accorga.
+
+Attacco Man-in-the-Middle (MITM): Un attaccante può posizionarsi tra due dispositivi Bluetooth e intercettare o manipolare la comunicazione, facendo sembrare che i dispositivi si stiano comunicando tra di loro in modo sicuro.
+
+Denial of Service (DoS): Gli attaccanti possono saturare il canale Bluetooth con richieste o segnali, impedendo ai dispositivi legittimi di comunicare.
+
+Attacco di pairing non sicuro: Se il processo di pairing non è ben protetto, un attaccante potrebbe forzare il pairing tra dispositivi e ottenere l'accesso non autorizzato.
+
+Vulnerabilità nei firmware: Dispositivi Bluetooth con firmware vulnerabili potrebbero essere facilmente compromessi. Gli attaccanti possono sfruttare questi difetti per ottenere l'accesso ai dispositivi o ai dati.
+
+Attacco al protocollo Bluetooth Low Energy (BLE): BLE ha alcune vulnerabilità che possono essere sfruttate per raccogliere dati sensibili o manipolare dispositivi connessi
