@@ -26,10 +26,34 @@ Di conseguenza lo stack di protocolli è diverso tra le varie tecnologie, ma ovv
 ## Stack di protocolli Bluetooth
 ![image](https://github.com/user-attachments/assets/b5f0969a-9729-41c5-b3ae-feb05593e09c)
 
-Per quanto riguarda il Bluetooth LE , nel Controller Layer, la trasmissione può essere anche codificata, (con velocità 125 kbps nel Bluetooth 5.1) di conseguenza, già qua viene effettuata una prima cifratura delle informazioni.
-
-In seguito però nell' Host Layer c'è un sottolivello che si occupa esclusivamente della sicurezza... l'SMP. 
+Per quanto riguarda il Bluetooth LE,  la sicurezza è gestita su più livelli dello **stack di protocollo**, ognuno con ruoli specifici, in particolare intervengono : LL,**SMP**,ATT,GATT
 
 Per quanto riguarda invece il Bluetooth Classic , Il livello LMP è quello che si occupa anche di operazioni di sicurezza. 
 
 In seguito spiegheremo questo adeguatamente
+
+## Come viene gestita la sicurezza nel Bluetooth LE
+### 1. Link Layer (LL) - Livello Controller  
+- Implementa la **crittografia AES-CCM a 128 bit** per proteggere i dati trasmessi.  
+- Gestisce **indirizzi MAC randomici** per la privacy e previene il tracciamento.  
+- Previene attacchi **replay** usando nonce e contatori.  
+
+### 3. Security Manager Protocol (SMP) - Pairing e Gestione Chiavi  
+- Gestisce il **pairing**(riconoscimento) e la **distribuzione delle chiavi di sicurezza**.  
+- Supporta diversi metodi di autenticazione, tra cui:  
+  - **Just Works** (senza autenticazione)
+  - **Passkey Entry** (uno dei dispositivi mostra un codice da inserire).  
+  - **Numeric Comparison** (entrambi i dispositivi confrontano un codice).  
+- Distribuisce chiavi come la **Long Term Key (LTK)** per la crittografia e la **Identity Resolving Key (IRK)** per la gestione della privacy.  
+
+### 4. Attribute Protocol (ATT) e Generic Attribute Profile (GATT) - Livello Applicativo  
+- **ATT** fornisce autenticazione e autorizzazione per l’accesso ai dati.  
+- **GATT** definisce servizi e caratteristiche, alcuni dei quali possono richiedere **connessioni crittografate o autenticazione** per l’accesso.  
+
+### 5. Secure Connections (Bluetooth 4.2 e successivi)  
+- Introdotte con Bluetooth 4.2, usano **ECDH (Elliptic Curve Diffie-Hellman)** per uno scambio sicuro delle chiavi, migliorando la protezione contro attacchi MITM.  
+
+
+## Come viene gestita la sicurezza nel Bluetooth Classic
+-**LMP** gestisce il **pairing, l'autenticazione e lo scambio delle chiavi**.  
+- **Baseband Layer** implementa la **crittografia e la protezione dai replay**. 
