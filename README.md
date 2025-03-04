@@ -19,5 +19,6 @@ __Scopo__ : *Progettato per la comunicazione a bassa potenza e per la connession
 __Diffusione__ : *Il Bluetooth lo troviamo ovunque , ad esempio in Smartphone, Tablet, Computer e laptop, Veicoli, Altoparlanti Bluetooth, Cuffie e auricolari wireless, Smartwatch,Dispositivi smart home....* 
 
 Quindi, a differenza del modello ISO-OSI, il Bluetooth è progettato per dispositivi che comunicano sulla stessa frequenza, anziché all'interno della stessa rete. Tuttavia, entrambe le tecnologie utilizzano uno stack di protocolli.
-Esistono due tecnologie di bluetooth :  Low Energy(LE)  e Basic Rate/ENhanced data (BR/EDR)
+Esistono due tecnologie di Bluetooth :  Low Energy(LE)  e Basic Rate/Enhanced data (BR/EDR)
+
 Di conseguenza lo stack di protocolli è diverso tra le varie tecnologie, ma ovviamente in entrambe ci sono dei livelli che si dedicano alla sicurezza.
