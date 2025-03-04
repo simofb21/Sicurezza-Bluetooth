@@ -55,5 +55,44 @@ In seguito spiegheremo questo adeguatamente
 
 
 ## Come viene gestita la sicurezza nel Bluetooth Classic
--**LMP** gestisce il **pairing, l'autenticazione e lo scambio delle chiavi**.  
-- **Baseband Layer** implementa la **crittografia e la protezione dai replay**. 
+- **LMP** gestisce il **pairing, l'autenticazione e lo scambio delle chiavi**.  
+- **Baseband Layer** implementa la **crittografia e la protezione dai replay**.
+
+## Vulnerabilità
+- Debole autenticazione : il metodo di pairing Just Works non richiede autenticazione, quindi i dispositivi si accoppiano senza verificare la legittimità della comunicazione. Di conseguenza un attaccante potrebbe intercettare la comunicazione...
+- non sempre gli indirizzi MAC vengono generati sufficientemente randomici
+- AES  a 128 bit è una crittografia sicura. Ma lo è se le chiavi vengono generate e gestite correttamente. Quindi la gestione e protezione delle chiavi è fondamentale. Attraverso esse l' attacante può accedere a dati sensibili.
+  - sono in circolazione dispositivi non aggiornati o obsoleti, inutilizzati ma col Bluetooth attivo che possono avere problemi risalenti ad anni fa
+
+## Attacchi
+- Sniffing : si intercettano i pacchetti di dati che vengono trasmessi in una comunicazione.
+  Viene sfruttata la banda di frequenza che è aperta e non protetta, quindi attraverso  una sorta di ricevitori radio si riesce ad ascoltare la trasmissione.
+  Durante il processo di pairing, sopratutto in metodi non sicuri come Just Works, si intercettano  i vari pacchetti grazie a applicazioni come Wireshark e è riusciti ad intercettare le comunicazioni.
+  Si andranno quindi a sfruttare le vulnerabilità di crittografia, ecc per ottenere dati sensibili.
+- Man in the Middle : un attaccante intercetta e manipla attivamente la comunicazione , agendo come intermediario.
+  Viene prima fatto Sniffing, per raccogliere informazioni ma l' attaccante non si limità a ciò
+  Modifica i dati in transito , falsifica messaggi, inietta comandi non autorizzati, può anche impersonare uno dei due dispositivi , facendo credere che la comunicazione sia reale...
+QUesti due si trovano sopratutto nel Bluetooth LE
+
+Ma esistono anche altri attacchi
+- DoS : vengono inviati pacchetti di disturbo per interrompere la connessione Bluetooth di dispositivi
+- Bluesnarfing : dati vengono rubati, grazie a tecniche viste in precedenza
+- Bluebugging : un attaccante riesce a inviare attraverso il Bluetooth comandi che permettono di prendere il controllo del dispositivo che sta subendo l' attacco.
+- Brute Force su Pin per comunicare via Bluetooth
+
+## Come difendersi ? 
+Noi utenti come facciamo a difenderci, ci sono alcune misure che è bene fare per essere più sicuri : 
+1. Spegnere il Bluetooth se non lo usiamo
+2. Non lasciare il dispositivo visibile , a meno che sia fondamentale
+3. Usare PIN di configurazione Bluetooth sicuri
+4. Diffidare da richiesta di pairing da dispositivi sconosciuti
+5. Associazione tramite Bluetooth solo se esplicitato da noi. Non lasciare che ciò possa avvenire in automatico.
+
+
+## Conclusione 
+
+Abbiamo quindi visto cos' è il Bluetooth, quali livelli dello Stack Bluetooth si occupano di sicurezza e quali sono alcune problematiche che riguardano la sicurezza.
+
+
+realizzato da Fusar Bassini Simone, Rosa Gabriele, Ingiardi Tommaso, Cornetti Andrea, Calabrese Alfredo.
+4IC Telecomunicazioni 2024/2025 GALILEI CREMA
