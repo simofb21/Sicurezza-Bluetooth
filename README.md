@@ -39,7 +39,7 @@ In seguito spiegheremo questo adeguatamente
 - Previene attacchi **replay**.  
 
 ### 2. Security Manager Protocol (SMP) - Pairing e Gestione Chiavi  
--definisce chi inizializza e chi risponde
+- definisce chi inizializza e chi risponde
 - Gestisce il **pairing**(accoppiamento) e la **distribuzione delle chiavi di sicurezza**.  
 - Supporta diversi metodi di autenticazione, tra cui:  
   - **Just Works** (senza autenticazione)
