@@ -34,7 +34,6 @@ In seguito spiegheremo questo adeguatamente
 
 ## Come viene gestita la sicurezza nel Bluetooth LE
 ### 1. Link Layer (LL) - Livello Controller  
--definisce chi inizializza e chi rispo
 - Implementa la **crittografia AES-CCM a 128 bit** per proteggere i dati trasmessi.  
 - Genera **indirizzi MAC randomici** per la privacy e previene il tracciamento.  
 - Previene attacchi **replay**.  
