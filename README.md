@@ -28,7 +28,7 @@ Di conseguenza lo stack di protocolli è diverso tra le varie tecnologie, ma ovv
 
 Per quanto riguarda il Bluetooth LE,  la sicurezza è gestita su più livelli dello **stack di protocollo**, ognuno con ruoli specifici, in particolare intervengono : LL,**SMP**,ATT,GATT
 
-Per quanto riguarda invece il Bluetooth Classic , Il livello LMP è quello che si occupa anche di operazioni di sicurezza. 
+Per quanto riguarda invece il Bluetooth Classic , Il livello LMP è quello che si occupa anche di operazioni di sicurezza e anche il Baseband Layer. 
 
 In seguito spiegheremo questo adeguatamente
 
