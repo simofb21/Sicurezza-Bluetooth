@@ -55,8 +55,8 @@ In seguito spiegheremo questo adeguatamente
 
 
 ## Come viene gestita la sicurezza nel Bluetooth Classic
-- **LMP** gestisce il **pairing, l'autenticazione e lo scambio delle chiavi**.  
-- **Baseband Layer** implementa la **crittografia e la protezione dai replay**.
+- **LMP** gestisce il **pairing, l'autenticazione e lo scambio delle chiavi**.  (livello collegamento)
+- **Baseband Layer** implementa la **crittografia e la protezione dai replay**.( a livello fisico)
 
 ## Vulnerabilità
 - **Debole autenticazione** : il metodo di pairing Just Works non richiede autenticazione, quindi i dispositivi si accoppiano senza verificare la legittimità della comunicazione. Di conseguenza un attaccante potrebbe intercettare la comunicazione...
