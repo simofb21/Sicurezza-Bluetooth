@@ -38,7 +38,7 @@ In seguito spiegheremo questo adeguatamente
 - Genera **indirizzi MAC randomici** per la privacy e previene il tracciamento.  
 - Previene attacchi **replay** usando nonce e contatori.  
 
-### 3. Security Manager Protocol (SMP) - Pairing e Gestione Chiavi  
+### 2. Security Manager Protocol (SMP) - Pairing e Gestione Chiavi  
 - Gestisce il **pairing**(accoppiamento) e la **distribuzione delle chiavi di sicurezza**.  
 - Supporta diversi metodi di autenticazione, tra cui:  
   - **Just Works** (senza autenticazione)
@@ -46,11 +46,11 @@ In seguito spiegheremo questo adeguatamente
   - **Numeric Comparison** (entrambi i dispositivi confrontano un codice).  
 - Distribuisce chiavi  per la crittografia e  per la gestione della privacy.  
 
-### 4. Attribute Protocol (ATT) e Generic Attribute Profile (GATT) - Livello Applicativo  
+### 3. Attribute Protocol (ATT) e Generic Attribute Profile (GATT) - Livello Applicativo  
 - **ATT** fornisce autenticazione e autorizzazione per l’accesso ai dati.  
 - **GATT** definisce servizi e caratteristiche, alcuni dei quali possono richiedere **connessioni crittografate o autenticazione** per l’accesso.  
 
-### 5. Secure Connections (Bluetooth 4.2 e successivi)  
+### 4. Secure Connections (Bluetooth 4.2 e successivi)  
 - Introdotte con Bluetooth 4.2, usano **ECDH (Elliptic Curve Diffie-Hellman)** per uno scambio sicuro delle chiavi, migliorando la protezione contro attacchi MITM.  
 
 
