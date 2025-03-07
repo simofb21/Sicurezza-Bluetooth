@@ -34,11 +34,13 @@ In seguito spiegheremo questo adeguatamente
 
 ## Come viene gestita la sicurezza nel Bluetooth LE
 ### 1. Link Layer (LL) - Livello Controller  
+-definisce chi inizializza e chi rispo
 - Implementa la **crittografia AES-CCM a 128 bit** per proteggere i dati trasmessi.  
 - Genera **indirizzi MAC randomici** per la privacy e previene il tracciamento.  
-- Previene attacchi **replay** usando nonce e contatori.  
+- Previene attacchi **replay**.  
 
 ### 2. Security Manager Protocol (SMP) - Pairing e Gestione Chiavi  
+-definisce chi inizializza e chi risponde
 - Gestisce il **pairing**(accoppiamento) e la **distribuzione delle chiavi di sicurezza**.  
 - Supporta diversi metodi di autenticazione, tra cui:  
   - **Just Works** (senza autenticazione)
