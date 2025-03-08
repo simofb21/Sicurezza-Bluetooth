@@ -95,7 +95,9 @@ In seguito spiegheremo questo adeguatamente
   Viene prima fatto Sniffing, per raccogliere informazioni ma l' attaccante non si limità a ciò
   Modifica i dati in transito , falsifica messaggi, inietta comandi non autorizzati, può anche impersonare uno dei due dispositivi , facendo credere che la comunicazione sia reale...
   Questi due si trovano sopratutto nel Bluetooth LE
-
+  #### Approfondimento Man in the Middle
+      Ora che abbiamo visto cos è il MITM , adesso andremo a spiegare come funziona effettivamente ...
+  
 Ma esistono anche altri attacchi
 - **DoS** : vengono inviati pacchetti di disturbo per interrompere la connessione Bluetooth di dispositivi
 - **Bluesnarfing** : dati vengono rubati, grazie a tecniche viste in precedenza
