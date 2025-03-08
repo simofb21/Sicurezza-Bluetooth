@@ -56,8 +56,29 @@ In seguito spiegheremo questo adeguatamente
 
 
 ## Come viene gestita la sicurezza nel Bluetooth Classic
-- **LMP** gestisce il **pairing, l'autenticazione e lo scambio delle chiavi**.  (livello collegamento)
-- **Baseband Layer** implementa la **crittografia e la protezione dai replay**.( a livello fisico)
+- **Baseband and Link Control** implementa la **crittografia e la protezione dai replay**:
+   - appartiene al livello fisico
+   - abilita il collegamento RF PHY tra i due dispositivi, formando una **PICONET**(rete dedicata a due o più dispositivi connessi tramite bluetooth)
+   - **Baseband** gestisce l'elaborazione e la temporizzazione del canale
+   - **Link control** controlla l'accesso al canale
+   - crittografia basata sull'algoritmo **E0**
+   - per la protezione dai replay si utilizza un contatore di frame, che cambia ad ogni trasmissione
+   - due diversi tipi di connessione:
+      - **sincrona**: traffico in tempo reale
+      - **asincrona**: trasmissione di più pacchetti di dati
+    
+- **LMP** gestisce il **pairing, l'autenticazione e lo scambio delle chiavi**:
+  - primo protocollo del livello collegamento
+  - imposta la configurazione del collegamento tra i due dispositivi
+  - inlude dei sistemi di sicurezza come autenticazione e crittografia con delle chiavi
+  - controlla la modalità di alimentazione, i cicli di lavoro e gli stati di connessione
+  - 3 modalità di sicurezza:
+     - **1**: nessuna sicurezza
+     - **2**: sicurezza a livello di servizio(politiche di sicurezza definite dall'applicazione
+     - **3**: sicurezza a livello di collegamento
+  - due versioni del pairing:
+     - versioni vecchie usavano pairing basato sul PIN, vulnerabile ad attacchi
+     - da Bluetooth 2.1+ introdotto SSP(secure simple pairing)
 
 ## Vulnerabilità
 - **Debole autenticazione** : il metodo di pairing Just Works non richiede autenticazione, quindi i dispositivi si accoppiano senza verificare la legittimità della comunicazione. Di conseguenza un attaccante potrebbe intercettare la comunicazione...
@@ -84,11 +105,13 @@ Ma esistono anche altri attacchi
 ## Come difendersi ? 
 Le ultime versioni di Bluetooth usano ECDH, l' algoritmo di Diffie-Hellmann che gestisce meglio la crittografia dietro le chiavi, di conseguenza i dispositivi più recenti, sono più sicuri.
 Ma ci sono alcune pratiche che è bene seguire per noi utenti, per aumentare la nostra sicurezza:
-1. Spegnere il Bluetooth se non lo usiamo
+1. Spegnere il Bluetooth se non lo usiamo per evitare **Bluebugging**, **Bluesnarfing** e **Bluejacking**
 2. Non lasciare il dispositivo visibile , a meno che sia fondamentale
-3. Usare PIN di configurazione Bluetooth sicuri
+3. Usare PIN di configurazione Bluetooth sicuri e non banali o semplici
 4. Diffidare da richiesta di pairing da dispositivi sconosciuti
-5. Associazione tramite Bluetooth solo se esplicitato da noi. Non lasciare che ciò possa avvenire in automatico.
+5. Associazione tramite Bluetooth solo se esplicitato da noi. Non lasciare che ciò possa avvenire in automatico. Ablitiare anche SSP
+6. Aggiornare il firmware del dispositivo
+7. Evitare di usare bluetooth in luoghi pubblici affollati, per evitare attacchi di **sniffing**
 
 
 ## Conclusione 
