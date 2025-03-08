@@ -4,12 +4,12 @@
 ## Indice
 1. __***Introduzione al Bluetooth***__
 2. __***Stack di protocolli Bluetooth***__
-3. __***I protocolli di sicurezza nel Bluetooth Low Energy***__
-4. __***I protocolli di sicurezza nel Bluetooth Classic***__
-5. __***Vulnerabilità del Bluetooth***__
-6. __***Attacchi noti***__
+3. __***I protocolli di sicurezza nel Bluetooth Low Energy***__  Fius
+4. __***I protocolli di sicurezza nel Bluetooth Classic***__  
+5. __***Vulnerabilità del Bluetooth***__  Fius
+6. __***Attacchi noti***__ Ingio
 7. __***Come proteggersi***__
-8. __***Conclusione***__
+8. __***Conclusione***__  Alfredo
 
 ## Introduzione al Bluetooth
 __Definizione__ : *Il Bluetooth è  una tecnologia di comunicazione wireless a corto raggio che consente lo scambio di dati tra dispositivi digitali.*
