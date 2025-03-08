@@ -103,7 +103,7 @@ Ma esistono anche altri attacchi
 - **Brute Force** su Pin per accoppiamento via Bluetooth
 
 ## Come difendersi ? 
-Le ultime versioni di Bluetooth usano ECDH, l' algoritmo di Diffie-Hellmann che gestisce meglio la crittografia dietro le chiavi, di conseguenza i dispositivi più recenti, sono più sicuri.
+Le ultime versioni di Bluetooth dalla 4.2 in poi sono più sicure.
 Ma ci sono alcune pratiche che è bene seguire per noi utenti, per aumentare la nostra sicurezza:
 1. Spegnere il Bluetooth se non lo usiamo per evitare **Bluebugging**, **Bluesnarfing** e **Bluejacking**
 2. Non lasciare il dispositivo visibile , a meno che sia fondamentale
