@@ -95,9 +95,78 @@ In seguito spiegheremo questo adeguatamente
   Viene prima fatto Sniffing, per raccogliere informazioni ma l' attaccante non si limità a ciò
   Modifica i dati in transito , falsifica messaggi, inietta comandi non autorizzati, può anche impersonare uno dei due dispositivi , facendo credere che la comunicazione sia reale...
   Questi due si trovano sopratutto nel Bluetooth LE
-  #### Approfondimento Man in the Middle
-      Ora che abbiamo visto cos è il MITM , adesso andremo a spiegare come funziona effettivamente ...
-  
+  ### Approfondimento Man in the Middle
+> Ora che abbiamo visto cos è il MITM, adesso andremo a spiegare come funziona effettivamente...
+>
+> #### 1. Fase di riconoscimento e analisi
+>
+> L'attaccante inizia ascoltando passivamente le comunicazioni BLE nell'area:
+>
+> - Monitora lo spettro di frequenze Bluetooth (2.4 GHz)
+> - Identifica i pacchetti di advertising dei dispositivi BLE attivi
+> - Cataloga gli indirizzi dei dispositivi
+> - Determina quali dispositivi stanno comunicando o potrebbero comunicare tra loro
+>
+> Durante questa fase, l'attaccante è completamente passivo e non altera in alcun modo la comunicazione.
+>
+> #### 2. Fase di clonazione e spoofing
+>
+> Per inserirsi tra due dispositivi, l'attaccante deve:
+>
+> - Creare due interfacce Bluetooth separate (una virtuale e una fisica)
+> - Configurare la prima interfaccia per clonare il dispositivo peripheral:
+>   - Copiare il l'indirizzo del dispositivo target
+>   - Replicare esattamente i suoi pacchetti di advertising
+>   - Simulare gli stessi servizi GATT
+> - Configurare la seconda interfaccia per comunicare con il dispositivo  originale
+> - Aumentare la potenza del segnale del clone per andare a "sostituire" il dispositivo originale.
+>
+> Il dispositivo centrale ora rileverà due dispositivi apparentemente identici, ma il clone dell'attaccante avrà un segnale più forte.
+>
+> #### 3. Fase di intercettazione della connessione
+>
+> Quando il dispositivo centrale tenta di connettersi:
+>
+> - Il dispositivo centrale si connette al clone (credendo sia il dispositivo legittimo)
+> - Simultaneamente, l'attaccante si connette al dispositivo peripheral originale
+> - L'attaccante crea così due canali di comunicazione separati:
+>   ```
+>   Dispositivo Centrale ↔ [Interfaccia 1 dell'attaccante] ... [Interfaccia 2 dell'attaccante] ↔ Dispositivo Peripheral
+>   ```
+> - Ogni messaggio viene ricevuto da una interfaccia e inoltrato all'altra
+>
+> #### 4. Intercettazione del processo di pairing
+>
+> Il momento cruciale è durante il pairing, quando vengono stabilite le chiavi di sicurezza:
+>
+> - L'attaccante intercetta la richiesta di pairing dal dispositivo centrale
+> - Avvia un processo di pairing separato con il dispositivo peripheral
+> - Durante lo scambio di chiavi pubbliche:
+>   - Intercetta le chiavi pubbliche di entrambi i dispositivi
+>   - Sostituisce queste chiavi con le proprie
+>   - Stabilisce due canali crittografati separati (uno con ciascun dispositivo)
+>
+> Questo processo è particolarmente efficace nei metodi di pairing meno sicuri , quindi in Just Works
+>
+> #### 5. Manipolazione e relay del traffico
+>
+> Una volta stabilite le due connessioni, l'attaccante può:
+>
+> - **Relay passivo**: Semplicemente inoltrare i messaggi tra i due dispositivi
+> - **Manipolazione attiva**: Modificare i dati prima di inoltrarli
+> - **Inserimento**: Iniettare comandi o dati non inviati da nessuno dei dispositivi legittimi
+> - **Blocco selettivo**: Impedire che certi messaggi raggiungano la destinazione
+>
+> #### 6. Meccanismi tecnici dell'attacco
+>
+> A livello di protocollo BLE, l'attacco funziona perché:
+>
+> - L'attaccante gestisce due connessioni distinte
+> - **Nel Security Manager Protocol**: L'attaccante intercetta i messaggi di pairing e key exchange
+> - **Nell'ATT/GATT**: L'attaccante può leggere e modificare tutti gli attributi scambiati
+
+*fine approfondimento mitm*
+
 Ma esistono anche altri attacchi
 - **DoS** : vengono inviati pacchetti di disturbo per interrompere la connessione Bluetooth di dispositivi
 - **Bluesnarfing** : dati vengono rubati, grazie a tecniche viste in precedenza
