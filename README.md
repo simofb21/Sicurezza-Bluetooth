@@ -24,7 +24,7 @@ Esistono due tecnologie di Bluetooth :  **Low Energy(LE)**  e **Basic Rate/Enhan
 Di conseguenza lo stack di protocolli è diverso tra le varie tecnologie, ma ovviamente in entrambe ci sono dei livelli che si dedicano alla sicurezza.
 
 ## Stack di protocolli Bluetooth
-![image](https://github.com/user-attachments/assets/b5f0969a-9729-41c5-b3ae-feb05593e09c)
+![image](https://github.com/user-attachments/assets/b5f0969a-9729-41c5-b3ae-feb05593e09c) (img presa dal materiale dei training camp di olicyber a torino)
 
 Per quanto riguarda il Bluetooth LE,  la sicurezza è gestita su più livelli dello **stack di protocollo**, ognuno con ruoli specifici, in particolare intervengono : LL,**SMP**,ATT,GATT
 
