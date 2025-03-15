@@ -180,7 +180,7 @@ Ma ci sono alcune pratiche che è bene seguire per noi utenti, per aumentare la 
 2. Non lasciare il dispositivo visibile , a meno che sia fondamentale
 3. Usare PIN di configurazione Bluetooth sicuri e non banali o semplici
 4. Diffidare da richiesta di pairing da dispositivi sconosciuti
-5. Associazione tramite Bluetooth solo se esplicitato da noi. Non lasciare che ciò possa avvenire in automatico. Ablitiare anche SSP
+5. Associazione tramite Bluetooth solo se esplicitato da noi. Non lasciare che ciò possa avvenire in automatico. Ablitiare anche SSP (secure simple pairing)
 6. Aggiornare il firmware del dispositivo
 7. Evitare di usare bluetooth in luoghi pubblici affollati, per evitare attacchi di **sniffing**
 
