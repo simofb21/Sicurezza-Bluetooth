@@ -52,9 +52,8 @@ In seguito spiegheremo questo adeguatamente
 - **GATT** definisce servizi e caratteristiche, alcuni dei quali possono richiedere **connessioni crittografate o autenticazione** per l’accesso.  
 
 ### 4. Secure Connections (Bluetooth 4.2 e successivi)  
-- Introdotte con Bluetooth 4.2, usano **ECDH (Elliptic Curve Diffie-Hellman)** per uno scambio sicuro delle chiavi, migliorando la protezione contro attacchi MITM.  
-
-
+- Introdotte con Bluetooth 4.2, usano **ECDH (Elliptic Curve Diffie-Hellman)** per uno scambio sicuro delle chiavi, migliorando la protezione contro attacchi MITM.
+  ![image](https://github.com/user-attachments/assets/9de1ed02-2d74-401f-8616-bb0b2aae03d4)
 ## Come viene gestita la sicurezza nel Bluetooth Classic
 - **Baseband and Link Control** implementa la **crittografia e la protezione dai replay**:
    - appartiene al livello fisico
