@@ -63,7 +63,7 @@ In seguito spiegheremo questo adeguatamente
    - **Link control** controlla l'accesso al canale
    - crittografia basata sull'algoritmo **E0**
    - per la protezione dai replay si utilizza un contatore di frame, che cambia ad ogni trasmissione
-   - due diversi tipi di connessione:
+   - due diversi tipi di connessione (sono comunque connession-oriented):
       - **sincrona**: traffico in tempo reale
       - **asincrona**: trasmissione di più pacchetti di dati
     
