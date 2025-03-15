@@ -60,7 +60,7 @@ In seguito spiegheremo questo adeguatamente
    - appartiene al livello fisico
    - abilita il collegamento RF PHY tra i due dispositivi, formando una **PICONET**(rete dedicata a due o più dispositivi connessi tramite bluetooth)
    - **Baseband** gestisce l'elaborazione e la temporizzazione del canale
-   - **Link control** controlla l'accesso al canale
+   - **Link control** controlla l'accesso al canale, apre e chiude le connessioni, controllo errori
    - crittografia basata sull'algoritmo **E0**
    - per la protezione dai replay si utilizza un contatore di frame, che cambia ad ogni trasmissione
    - due diversi tipi di connessione (sono comunque connession-oriented):
